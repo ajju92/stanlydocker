@@ -1,0 +1,11 @@
+name: ci
+
+on: [push]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Run docker
+        uses: docker --version
