@@ -1,16 +1,14 @@
 name: ci
 
-on:
-  push:
-  branches:
-    - 'main/*'  
+on: push  
 
 jobs:
-  build:
+  hello_world_job:
     runs-on: ubuntu-latest
-    name: Build and Test
+    name: buidl the image
     steps:
-    - uses: Build image
-      name: Check out repository
-    - uses: test
-      name: Check out repository 
+      - name: build the imagep
+        id: build
+        uses: actions/hello-world-docker-action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'
