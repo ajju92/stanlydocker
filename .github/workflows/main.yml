@@ -1,10 +1,16 @@
 name: ci
 
-on: [push]
+on:
+  push:
+  branches:
+    - 'main/*'  
+
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
+    name: Build and Test
     steps:
-      -
-        name: Docker sample commands
-        run: docker --version
+    - uses: Build image
+      name: Check out repository
+    - uses: test
+      name: Check out repository 
