@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: build the imagep
         id: build
-        uses: actions/Dockerfile@v1
+        uses: actions/hello-world-docker-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
       - uses: actions/setup-node@v2
